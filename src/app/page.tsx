@@ -36,7 +36,11 @@ export default function Component() {
           </p>
           <p className="flex items-center gap-2">
             <span>🎓</span>
-            grad student at sjsu | current focus on ai/ml
+            grad student at sjsu
+          </p>
+          <p className="flex items-center gap-2">
+            <span>📚</span>
+            current focus on ai/ml
           </p>
           <p className="flex items-center gap-2">
             <span>📍</span>
