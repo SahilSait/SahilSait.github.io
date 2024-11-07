@@ -1,101 +1,104 @@
-import Image from "next/image";
+import { FaGithub, FaLinkedin, FaGoogleDrive } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
-export default function Home() {
+export default function Component() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source
+          src="/interstellar.mp4"
+          type="video/mp4"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </video>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Content */}
+      <div className="relative z-10 min-h-screen px-6 py-12 max-w-2xl mx-auto text-white">
+        <h1 className="text-4xl font-light mb-8">sahil sait</h1>
+
+        <div className="space-y-2 mb-12">
+          <p className="flex items-center gap-2">
+            <span>🚀</span>
+             systems engineer | <a href="https://drive.google.com/file/d/1fBVfJjwYFFw5aK9GeVMwjToBVs1twW_9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <FaGoogleDrive className="w-5 h-5"/>
+            <span>resume</span>
+            </a>
+          </p>
+          <p className="flex items-center gap-2">
+            <span>🎓</span>
+            grad student at sjsu | current focus on ai/ml
+          </p>
+          <p className="flex items-center gap-2">
+            <span>📍</span>
+            san francisco bay area
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <section className="mb-12">
+          <div className="space-y-3">
+            <p className="flex items-center gap-2 italic">
+              We&apos;ve always defined ourselves by the ability to overcome the impossible.
+              And we count these moments, when we dared to aim higher, to break barriers, to reach for the stars, to make the unknown known.
+              We count these moments as our proudest achievements.
+              But we had lost all that.
+              We had just forgotten that
+              we are still pioneers,
+              we&apos;ve barely begun, 
+              our greatest accomplishments cannot be behind us, 
+              as our destiny lies above us.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold mb-4">projects</h2>
+          <div className="space-y-3">
+            <p className="flex items-center gap-2">
+              <span>📜</span>
+              blockchain-based certificate verification system:{" "}
+              <a href="https://cvs-admin.netlify.app" target="_blank" rel="noopener noreferrer" >link</a>/
+              <a href="#" target="_blank" rel="noopener noreferrer" >code</a>
+            </p>
+            <p className="flex items-center gap-2">
+              <span>💸</span>
+              tokenize - an erc20 token generator:
+              <a href="https://tokenize-sahilsait.netlify.app" target="_blank" rel="noopener noreferrer">link</a>/
+              <a href="https://github.com/sahilsait/tokenize" target="_blank" rel="noopener noreferrer">code</a>
+            </p>
+          </div>
+        </section>
+        <section className="mt-16 pt-8 border-t border-white/20">
+          <div className="flex flex-wrap justify-center gap-8 text-sm">
+            <a href="https://github.com/sahilsait" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white/80">
+              <FaGithub className="w-5 h-5" />
+              <span>sahilsait</span>
+            </a>
+            <a href="https://x.com/sahilsaitn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white/80">
+              <FaXTwitter className="w-5 h-5" />
+              <span>@sahilsaitn</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sahilsait/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white/80">
+              <FaLinkedin className="w-5 h-5" />
+              <span>Sahil Sait Naveed</span>
+            </a>
+            <a href="mailto:sahilsaitn@gmail.com" className="flex items-center gap-2 hover:text-white/80">
+              <IoMdMail className="w-5 h-5" />
+              <span>sahilsaitn@gmail.com</span>
+            </a>
+
+          </div>
+        </section>
+      </div>
     </div>
-  );
+  )
 }
